@@ -1,0 +1,25 @@
+CONGRATS! You just started your first project that you cloned from your own repository.
+- NO FORKING WAY!!!!
+
+Now put your tail back between your legs and make a TODO!
+
+1. Create your server, public, scripts, vendors, styles folders {x}
+
+2. Create your html, css, client.js, server.js files and bring in jQuery {x}
+    -put these in their appropriate folders {x}
+
+3. Bring in package/package lock JSON files and make sure they end up level with the server folder {}
+
+4. HTML - make sure everything is sourced and linked correctly {}
+
+5. HTML - setup your static HTML {}
+    - SERVER SIDE CALCULATOR header {}
+    - Two inputs for two whole integers with {}
+    - 4 buttons in between (+, -, *, /) {}
+    - 2 buttons at end (=, CLR) {}
+
+6. Install express and the body-parser modules in the server.js file... make a node_modules folder if one doesn't automatically appear {}
+
+7. Build as much of the basic communicative framework between client and server as possible before starting logic {}
+
+8. LOGIC... think about this for awhile and ask for help if you get flustered!
