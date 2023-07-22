@@ -27,8 +27,14 @@ Now put your tail back between your legs and make a TODO!
     - Create operand functions (don't forget the console.logs!) {}
 
 8. LOGIC... think about this for awhile and ask for help if you get flustered!
-    - Let's start figuring out the math functions berfore we put them into their rightful spots
+    - Let's start figuring out the math functions berfore we put them into their rightful spots. Math functions need to happen on the server side, but are the relevant click events happening there too? The function equals() will effectively send our two numbers over to be calculated in the respective click event. How do we send over the click event with our two numbers from client to server and return our sum?
 
     ADDITON:
 
-    
+    function add() {
+  var num1 = $("#firstNumberInput").val();
+  var num2 = $("#num2").val();
+  var answer = parseInt(num1) + parseInt(num2);
+  $("#total").val(answer);
+}
+
