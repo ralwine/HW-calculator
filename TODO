@@ -10,16 +10,20 @@ Now put your tail back between your legs and make a TODO!
 
 3. Bring in package/package lock JSON files and make sure they end up level with the server folder {}
 
-4. HTML - make sure everything is sourced and linked correctly {}
+4. HTML - make sure everything is sourced and linked correctly {x}
 
-5. HTML - setup your static HTML {}
-    - SERVER SIDE CALCULATOR header {}
-    - Two inputs for two whole integers with {}
-    - 4 buttons in between (+, -, *, /) {}
-    - 2 buttons at end (=, CLR) {}
+5. HTML - setup your static HTML {x}
+    - SERVER SIDE CALCULATOR header {x}
+    - Two inputs for two whole integers with {x}
+    - 4 buttons in between (+, -, *, /) {x}
+    - 2 buttons at end (=, CLR) {x}
 
-6. Install express and the body-parser modules in the server.js file... make a node_modules folder if one doesn't automatically appear {}
+6. Install express and the body-parser modules in the server.js file... make a node_modules folder if one doesn't automatically appear {x}
 
 7. Build as much of the basic communicative framework between client and server as possible before starting logic {}
+    - Put listeners on operand buttons {x}
+    - Put a listener on equal button {}
+    - Put a listener on CLR button (.remove)? {}
+    - Create operand functions (don't forget the console.logs!) {}
 
 8. LOGIC... think about this for awhile and ask for help if you get flustered!
