@@ -4,26 +4,40 @@ function onReady() {
     console.log("HERE HERE!");
 
     // add, subtract, multiply, divide... so far
-    $('#add').on('click', addNumbers);
-    $('#subtract').on('click', subtractNumbers);
-    $('#multiply').on('click', multiplyNumbers);
-    $('#divide').on('click', divideNumbers);
+    $('#add').on('click', addition);
+    $('#subtract').on('click', subtraction);
+    $('#multiply').on('click', multiplication);
+    $('#divide').on('click', division);
+
+    $('#equals').on('click', equals);
+
+    $('#clear').on('click', clear);
 
 }
 
 // functions addNumbers, subtractNumbers, multiplyNumbers, divideNumbers... so far
-function addNumbers(){
-    console.log('in addNumbers');
+function addition(){
+    console.log('in addition');
 }
 
-function subtractNumbers(){
-    console.log('in subtractNumbers');
+function subtraction(){
+    console.log('in subtraction');
 }
 
-function multiplyNumbers(){
-    console.log('in multiplyNumbers');
+function multiplication(){
+    console.log('in multiplication');
 }
 
-function divideNumbers(){
-    console.log('in subtractNumbers');
+function division(){
+    console.log('in division');
+}
+
+function clear() {
+    console.log('in clear');
+    
+}
+
+function equals() {
+    console.log('in equals');
+
 }
