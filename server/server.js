@@ -56,7 +56,6 @@ app.get('/returncalc', (req, res) => {
 })
 
 
-
 app.post('/submitcalc', (req, res) => {
     console.log("Body for submitcalculation:", req.body);
 
