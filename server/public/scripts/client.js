@@ -52,7 +52,7 @@ let submitCalculation = event => {
     const inputNumbers = {
         numberOne: $('#firstNumberInput').val(),
         numberTwo: $('#secondNumberInput').val(),
-        operands: $('.operands').on('click')
+        operands: $('.operands[]').on('click')
     }
 
 

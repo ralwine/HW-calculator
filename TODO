@@ -35,7 +35,7 @@ Now put your tail back between your legs and make a TODO!
 
     function add() {
   var num1 = $("#firstNumberInput").val();
-  var num2 = $("#num2").val();
+  var num2 = $("#secondNumberInput").val();
   var answer = parseInt(num1) + parseInt(num2);
   $("#total").val(answer);
 }
