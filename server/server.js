@@ -38,7 +38,7 @@ let calculations = [
         var num2 = $("#secondNumberInput").val();
         var answer = parseInt(num1) / parseInt(num2);
         $("#total").val(answer);
-    },
+    }
 
 ]
 
