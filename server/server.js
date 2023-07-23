@@ -11,36 +11,38 @@ app.use(express.static('server/public'));
 
 // let's see if the two number inputs requested constitute an array or not
 // I know that I am doing this wrong, but this is the gist of it.
-let calculations = [
-    function add() {
-        var num1 = $("#firstNumberInput").val();
-        var num2 = $("#secondNumberInput").val();
-        var answer = parseInt(num1) + parseInt(num2);
-        $("#total").val(answer);
-    },
+let calculations = []
 
-    function subtract() {
-        var num1 = $("#firstNumberInput").val();
-        var num2 = $("#secondNumberInput").val();
-        var answer = parseInt(num1) - parseInt(num2);
-        $("#total").val(answer);
-    },
 
-    function multiply() {
-        var num1 = $("#firstNumberInput").val();
-        var num2 = $("#secondNumberInput").val();
-        var answer = parseInt(num1) * parseInt(num2);
-        $("#total").val(answer);
-    },
+/*function add() {
+    var num1 = $("#firstNumberInput").val();
+    var num2 = $("#secondNumberInput").val();
+    var answer = parseInt(num1) + parseInt(num2);
+    $("#equals").val(answer);
+}
 
-    function divide() {
-        var num1 = $("#firstNumberInput").val();
-        var num2 = $("#secondNumberInput").val();
-        var answer = parseInt(num1) / parseInt(num2);
-        $("#total").val(answer);
-    }
+function subtract() {
+    var num1 = $("#firstNumberInput").val();
+    var num2 = $("#secondNumberInput").val();
+    var answer = parseInt(num1) - parseInt(num2);
+    $("#equals").val(answer);
+}
 
-]
+function multiply() {
+    var num1 = $("#firstNumberInput").val();
+    var num2 = $("#secondNumberInput").val();
+    var answer = parseInt(num1) * parseInt(num2);
+    $("#equals").val(answer);
+}
+
+function divide() {
+    var num1 = $("#firstNumberInput").val();
+    var num2 = $("#secondNumberInput").val();
+    var answer = parseInt(num1) / parseInt(num2);
+    $("#equals").val(answer);
+}
+
+*/
 
 
 
@@ -48,7 +50,7 @@ let calculations = [
 // Has a path: /returncalc
 // Has anonymous function: has req and res
 app.get('/returncalc', (req, res) => {
-    console.log("Arrived at /quotes", calculations)
+    console.log("Arrived at calculations", calculations)
 
     // Server is responding with the calculations
     res.send(calculations)

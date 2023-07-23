@@ -10,12 +10,12 @@ function onReady() {
     console.log("HERE HERE!");
 
     // add, subtract, multiply, divide... so far
-    /*
+    
     $('#add').on('click', operands);
     $('#subtract').on('click', operands);
     $('#multiply').on('click', operands);
     $('#divide').on('click', operands);
-    */
+
 
     $('#equals').on('click', submitCalculation);
     getCalculation();
@@ -23,29 +23,6 @@ function onReady() {
 
 }
 
-/*
-
-function addition() {
-    console.log('in addition');
-}
-
-function subtraction() {
-    console.log('in subtraction');
-}
-
-function multiplication() {
-    console.log('in multiplication');
-}
-
-function division() {
-    console.log('in division');
-}
-
-function equals() {
-    console.log('in equals');
-
-}
-*/
 let submitCalculation = event => {
     event.preventDefault();
     console.log('in submitCalculation');
