@@ -1,3 +1,24 @@
+UPDATED FOR RESUBMISSION
+
+Here's what needs to be fixed!!!
+
+Start with general items:
+
+Lucky for you there's only one assuimg you don't break anything else:
+- Clear or "C" button clears form inputs. {x}
+
+
+Okay then, Functional Requirements:
+    - Submit button or = button runs POST {}
+    - All calculations done on the server {}
+    - History displays all previous calculations {}
+    - GET on page load retrieves all history data on the server {}
+
+YOU GOT THIS!
+
+
+
+
 CONGRATS! You just started your first project that you cloned from your own repository.
 - NO FORKING WAY!!!!
 

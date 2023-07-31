@@ -12,10 +12,10 @@ function onReady() {
     // add, subtract, multiply, divide... so far
     
     
-
+    //$(#operands).on('click',?)
 
     $('#equals').on('click', submitCalculation);
-    getCalculation();
+    //getCalculation();
     $('#clear').on('click', clear);
 
 }
