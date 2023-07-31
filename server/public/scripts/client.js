@@ -36,7 +36,7 @@ let submitCalculation = event => {
     // Ajax will communicate and send dat to the server
     $.ajax({
         method: "POST", // type of request
-        url: "/submitcalc", //route that will be used
+        url: "/calc", //route that will be used
         data: inputNumbers// Needs to be an object
     }).then((response) => {
         console.log("POST was successful", response) //Expect 201
@@ -65,7 +65,7 @@ let getCalculation = () => {
         // Tells Ajax how to communicate with server,
         // also tells Ajax where to go on the server
         method: 'GET',
-        url: '/returncalc'
+        url: '/calc'
     }).then((response) => {
         console.log(response);
         sum = response //Adds our numbers to the DOM (as long as the server is still running)

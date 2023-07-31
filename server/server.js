@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-const port = 5000;
+const PORT = 5000;
 
 // This must be added before GET & POST routes.
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -49,7 +49,7 @@ function divide() {
 // Create GET route
 // Has a path: /returncalc
 // Has anonymous function: has req and res
-app.get('/returncalc', (req, res) => {
+app.get('/calc', (req, res) => {
     console.log("Arrived at calculations", calculations)
 
     // Server is responding with the calculations
@@ -58,7 +58,7 @@ app.get('/returncalc', (req, res) => {
 })
 
 
-app.post('/submitcalc', (req, res) => {
+app.post('/calc', (req, res) => {
     console.log("Body for submitcalculation:", req.body);
 
     let newCalculation = req.body
@@ -71,6 +71,6 @@ app.post('/submitcalc', (req, res) => {
 
 
 // functions addNumbers, subtractNumbers, multiplyNumbers, divideNumbers... so far
-app.listen(port, () => {
-    console.log('listening on port', port)
+app.listen(PORT, () => {
+    console.log('listening on port', PORT)
 })
