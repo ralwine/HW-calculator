@@ -22,7 +22,7 @@ function onReady() {
 
 function submitCalculation(event) {
     event.preventDefault();
-    console.log('in submitCalculation');
+    //console.log('in submitCalculation');
     console.log("clicking on: ", $(this));
     
     //move these ahead of the object you are making
@@ -32,7 +32,7 @@ function submitCalculation(event) {
     const inputNumbers = {
         numberOne,
         numberTwo,
-        
+        operands
     }
     // Ajax will communicate and send dat to the server
     $.ajax({
@@ -42,7 +42,7 @@ function submitCalculation(event) {
     }).then((response) => {
         console.log("POST was successful", response) //Expect 201
         getCalculation();
-        //render();
+        render();
     }).catch((error) => {
         console.log("Error with POST request", error);
         alert("Error with POST");
@@ -54,7 +54,7 @@ function submitCalculation(event) {
 }
 // try sending the operands seperately on their own clicks!!
 function submitOperands() {
-    console.log('Operands submitting');
+    //console.log('Operands submitting');
     console.log("clicking on: ", $(this));
     //operands = $(this).text();
 }

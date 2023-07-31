@@ -21,7 +21,7 @@ app.get('/calc', (req, res) => {
 
     // Server is responding with the calculations
     res.send(calculations)
-    res.sendStatus(200)
+    //res.sendStatus(200)
 })
 
 
@@ -42,12 +42,15 @@ app.post('/calc', (req, res) => {
     calculations.push(newCalculation)
 
     console.log("currentCalculations", calculations)
-    res.sendStatus(201)
+    //res.sendStatus(201)
 })
 
 
 
 // functions addNumbers, subtractNumbers, multiplyNumbers, divideNumbers... so far
+
+
+
 app.listen(PORT, () => {
     console.log('listening on port', PORT)
 })
