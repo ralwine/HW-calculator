@@ -13,39 +13,6 @@ app.use(express.static('server/public'));
 // I know that I am doing this wrong, but this is the gist of it.
 let calculations = []
 
-
-/*function add() {
-    var num1 = $("#firstNumberInput").val();
-    var num2 = $("#secondNumberInput").val();
-    var answer = parseInt(num1) + parseInt(num2);
-    $("#equals").val(answer);
-}
-
-function subtract() {
-    var num1 = $("#firstNumberInput").val();
-    var num2 = $("#secondNumberInput").val();
-    var answer = parseInt(num1) - parseInt(num2);
-    $("#equals").val(answer);
-}
-
-function multiply() {
-    var num1 = $("#firstNumberInput").val();
-    var num2 = $("#secondNumberInput").val();
-    var answer = parseInt(num1) * parseInt(num2);
-    $("#equals").val(answer);
-}
-
-function divide() {
-    var num1 = $("#firstNumberInput").val();
-    var num2 = $("#secondNumberInput").val();
-    var answer = parseInt(num1) / parseInt(num2);
-    $("#equals").val(answer);
-}
-
-*/
-
-
-
 // Create GET route
 // Has a path: /calc
 // Has anonymous function: has req and res
@@ -54,7 +21,7 @@ app.get('/calc', (req, res) => {
 
     // Server is responding with the calculations
     res.send(calculations)
-    // res.sendStatus(200)
+    res.sendStatus(200)
 })
 
 

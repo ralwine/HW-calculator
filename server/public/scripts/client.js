@@ -1,10 +1,10 @@
 $(document).ready(onReady);
 
-let calculation;
+//let calculation;
 // array of operands to send over to convert into commands, perhaps?
 let operands = ['+', '-', '*', '/']
 
-let sum
+
 
 function onReady() {
     console.log("HERE HERE!");
@@ -12,7 +12,7 @@ function onReady() {
     // add, subtract, multiply, divide... so far
     
     
-    //$(#operands).on('click',?)
+    $('#operands').on('click',submitOperands);
 
     $('#equals').on('click', submitCalculation);
     //getCalculation();
@@ -20,19 +20,20 @@ function onReady() {
 
 }
 
-let submitCalculation = event => {
+function submitCalculation(event) {
     event.preventDefault();
     console.log('in submitCalculation');
+    console.log("clicking on: ", $(this));
     const inputNumbers = {
         numberOne: $('#firstNumberInput').val(),
         numberTwo: $('#secondNumberInput').val(),
-        operands: $('.operands[]').on('click')
+        //operands: $('.operands[]').on('click') //see if this is going anywhere
     }
 
 
     // Ajax will communicate and send dat to the server
     $.ajax({
-        method: "POST", // type of request
+        method: 'POST', // type of request
         url: "/calc", //route that will be used
         data: inputNumbers// Needs to be an object
     }).then((response) => {
@@ -45,15 +46,22 @@ let submitCalculation = event => {
 
 
         getCalculation();
-        render();
+        //render();
     })
     //$('#firstNumberInput').val("");
     //$('#secondNumberInput').val("");
 
     // Take some data and send to server
 }
+// try sending the operands seperately on their own clicks!!
+function submitOperands() {
+    console.log('Operands submitting')
+    console.log("clicking on: ", $(this));
 
-let getCalculation = () => {
+}
+
+
+function getCalculation() {
     // Use Ajax to retrieve (GET) quotes from server
     // Server endpooint: /quotes
     console.log('inside result');
@@ -64,9 +72,9 @@ let getCalculation = () => {
         method: 'GET',
         url: '/calc'
     }).then((response) => {
-        console.log(response);
-        sum = response //Adds our numbers to the DOM (as long as the server is still running)
-        render();
+        console.log("GET client side responding!",response);
+        render(response) //Adds our numbers to the DOM (as long as the server is still running)
+        
 
     }).catch((error) => {
         alert("Request failed")
@@ -74,7 +82,7 @@ let getCalculation = () => {
     })
 }
 
-let render = () => {
+function render() {
     $('#output').empty();
     // Looping over and appending to DOM
     for (let calculation of sum) {
