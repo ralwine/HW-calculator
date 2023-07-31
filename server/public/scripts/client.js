@@ -2,7 +2,7 @@ $(document).ready(onReady);
 
 //let calculation;
 // array of operands to send over to convert into commands, perhaps?
-const operands = ['+', '-', '*', '/']
+const operands = ['+', '-', '*', '/'] // operands are being sent undefined
 
 
 
@@ -24,13 +24,16 @@ function submitCalculation(event) {
     event.preventDefault();
     console.log('in submitCalculation');
     console.log("clicking on: ", $(this));
+    
+    //move these ahead of the object you are making
+    const numberOne =$('#firstNumberInput').val();
+    const numberTwo =$('#secondNumberInput').val();
+    // this object
     const inputNumbers = {
-        numberOne: $('#firstNumberInput').val(),
-        numberTwo: $('#secondNumberInput').val(),
-        //operands: $('.operands[]').on('click') //see if this is going anywhere
+        numberOne,
+        numberTwo,
+        
     }
-
-
     // Ajax will communicate and send dat to the server
     $.ajax({
         method: 'POST', // type of request
@@ -43,10 +46,6 @@ function submitCalculation(event) {
     }).catch((error) => {
         console.log("Error with POST request", error);
         alert("Error with POST");
-
-
-       //getCalculation();
-        //render();
     })
     //$('#firstNumberInput').val("");
     //$('#secondNumberInput').val("");

@@ -27,8 +27,18 @@ app.get('/calc', (req, res) => {
 
 app.post('/calc', (req, res) => {
     console.log("Body for submitcalculation:", req.body);
+    // Looking at codechallenge#2 to bundle 
+    const num1 = Number(req.body.num1)
+    const num2 = Number(req.body.num2)
+    const operand = req.body.operand
 
-    let newCalculation = req.body
+    // let's see if we can something to append to the DOM first
+    let newCalculation ={
+        num1,
+        num2,
+        operand
+    }
+
     calculations.push(newCalculation)
 
     console.log("currentCalculations", calculations)
