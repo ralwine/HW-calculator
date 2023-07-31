@@ -11,15 +11,12 @@ function onReady() {
 
     // add, subtract, multiply, divide... so far
     
-    $('#add').on('click', operands);
-    $('#subtract').on('click', operands);
-    $('#multiply').on('click', operands);
-    $('#divide').on('click', operands);
+    
 
 
     $('#equals').on('click', submitCalculation);
     getCalculation();
-    //$('.input').on('click', clear);
+    $('#clear').on('click', clear);
 
 }
 
@@ -94,7 +91,9 @@ let render = () => {
 
 function clear() {
     console.log('in clear');
-    $().val().remove();
+    $('#firstNumberInput').val('');
+    $('#secondNumberInput').val('');
+
 
 }
 

@@ -47,7 +47,7 @@ function divide() {
 
 
 // Create GET route
-// Has a path: /returncalc
+// Has a path: /calc
 // Has anonymous function: has req and res
 app.get('/calc', (req, res) => {
     console.log("Arrived at calculations", calculations)
