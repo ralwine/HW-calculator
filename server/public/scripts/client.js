@@ -2,7 +2,7 @@ $(document).ready(onReady);
 
 //let calculation;
 // array of operands to send over to convert into commands, perhaps?
-let operands = ['+', '-', '*', '/']
+const operands = ['+', '-', '*', '/']
 
 
 
@@ -10,12 +10,12 @@ function onReady() {
     console.log("HERE HERE!");
 
     // add, subtract, multiply, divide... so far
-    
-    
-    $('#operands').on('click',submitOperands);
 
+    // listener for +-*/ is working
+    $('.operands').on('click', submitOperands);
+    // listener for = is working
     $('#equals').on('click', submitCalculation);
-    //getCalculation();
+    // listener for clear is working
     $('#clear').on('click', clear);
 
 }
@@ -38,14 +38,14 @@ function submitCalculation(event) {
         data: inputNumbers// Needs to be an object
     }).then((response) => {
         console.log("POST was successful", response) //Expect 201
-        //getNumbers();
+        getCalculation();
         //render();
     }).catch((error) => {
         console.log("Error with POST request", error);
         alert("Error with POST");
 
 
-        getCalculation();
+       //getCalculation();
         //render();
     })
     //$('#firstNumberInput').val("");
@@ -55,9 +55,9 @@ function submitCalculation(event) {
 }
 // try sending the operands seperately on their own clicks!!
 function submitOperands() {
-    console.log('Operands submitting')
+    console.log('Operands submitting');
     console.log("clicking on: ", $(this));
-
+    //operands = $(this).text();
 }
 
 
@@ -72,9 +72,9 @@ function getCalculation() {
         method: 'GET',
         url: '/calc'
     }).then((response) => {
-        console.log("GET client side responding!",response);
+        console.log("GET client side responding!", response);
         render(response) //Adds our numbers to the DOM (as long as the server is still running)
-        
+
 
     }).catch((error) => {
         alert("Request failed")
@@ -82,10 +82,10 @@ function getCalculation() {
     })
 }
 
-function render() {
+function render(calculations) {
     $('#output').empty();
     // Looping over and appending to DOM
-    for (let calculation of sum) {
+    for (let calculation of calculations) {
         console.log(calculation);
         $('#output').append(`
             <li>
