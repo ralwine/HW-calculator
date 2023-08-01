@@ -32,23 +32,32 @@ app.post('/calc', (req, res) => {
     const num2 = Number(req.body.num2)
     const operand = req.body.operand
 
+    let sum = mathFunctions(num1, num2, operand);
     // let's see if we can something to append to the DOM first
-    let newCalculation ={
+    let newCalculation = {
         num1,
         num2,
-        operand
+        operand,
+        sum
     }
 
     calculations.push(newCalculation)
 
-    console.log("currentCalculations", calculations)
+    console.log("currentCalculations", newCalculation) // getting to here, coming back undefined
     //res.sendStatus(201)
 })
 
 
 
 // functions addNumbers, subtractNumbers, multiplyNumbers, divideNumbers... so far
-
+function mathFunctions(value1, value2, oper) {
+    console.log("In mathFunctions") // getting to mathfunctions still undefined
+    // let's try if/else for this
+    if (oper == '+'){
+        return value1 + value2;
+    }
+    
+}
 
 
 app.listen(PORT, () => {

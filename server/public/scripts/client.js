@@ -12,7 +12,7 @@ function onReady() {
     // add, subtract, multiply, divide... so far
 
     // listener for +-*/ is working
-    $('.operands').on('click', submitOperands);
+    $('.operands').on('click', submitCalculation);
     // listener for = is working
     $('#equals').on('click', submitCalculation);
     // listener for clear is working
@@ -24,16 +24,18 @@ function submitCalculation(event) {
     event.preventDefault();
     //console.log('in submitCalculation');
     console.log("clicking on: ", $(this));
-    
+
     //move these ahead of the object you are making
-    const numberOne =$('#firstNumberInput').val();
-    const numberTwo =$('#secondNumberInput').val();
+    const numberOne = $('#firstNumberInput').val();
+    const numberTwo = $('#secondNumberInput').val();
     // this object
     const inputNumbers = {
         numberOne,
         numberTwo,
         operands
     }
+
+
     // Ajax will communicate and send dat to the server
     $.ajax({
         method: 'POST', // type of request
@@ -42,7 +44,7 @@ function submitCalculation(event) {
     }).then((response) => {
         console.log("POST was successful", response) //Expect 201
         getCalculation();
-        render();
+        //render();
     }).catch((error) => {
         console.log("Error with POST request", error);
         alert("Error with POST");
@@ -52,12 +54,7 @@ function submitCalculation(event) {
 
     // Take some data and send to server
 }
-// try sending the operands seperately on their own clicks!!
-function submitOperands() {
-    //console.log('Operands submitting');
-    console.log("clicking on: ", $(this));
-    //operands = $(this).text();
-}
+
 
 
 function getCalculation() {
@@ -88,14 +85,14 @@ function render(calculations) {
         console.log(calculation);
         $('#output').append(`
             <li>
-            ${calculation}
+            ${calculation.numberOne}
             </li>
       `)
 
     }
 
 }
-
+// you're not appending anything because there is no #output to append to!
 function clear() {
     console.log('in clear');
     $('#firstNumberInput').val('');
