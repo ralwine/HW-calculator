@@ -28,8 +28,8 @@ app.get('/calc', (req, res) => {
 app.post('/calc', (req, res) => {
     console.log("Body for submitcalculation:", req.body);
     // Looking at codechallenge#2 to bundle 
-    const num1 = Number(req.body.num1)
-    const num2 = Number(req.body.num2)
+    const num1 = Number(req.body.numberOne)
+    const num2 = Number(req.body.numberTwo)
     const operand = req.body.operand
 
     let sum = mathFunctions(num1, num2, operand);
@@ -44,7 +44,7 @@ app.post('/calc', (req, res) => {
     calculations.push(newCalculation)
 
     console.log("currentCalculations", newCalculation) // getting to here, coming back undefined
-    //res.sendStatus(201)
+    res.sendStatus(201)
 })
 
 
@@ -56,7 +56,8 @@ function mathFunctions(value1, value2, oper) {
     if (oper == '+'){
         return value1 + value2;
     }
-    
+    if()
+    }
 }
 
 

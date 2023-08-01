@@ -2,17 +2,17 @@ $(document).ready(onReady);
 
 //let calculation;
 // array of operands to send over to convert into commands, perhaps?
-const operands = ['+', '-', '*', '/'] // operands are being sent undefined
-
+// const operands = ['+', '-', '*', '/'] // operands are being sent undefined
+let operand;
 
 
 function onReady() {
     console.log("HERE HERE!");
 
     // add, subtract, multiply, divide... so far
-
+    getCalculation()
     // listener for +-*/ is working
-    $('.operands').on('click', submitCalculation);
+    $('.isOperand').on('click', chooseOperand);
     // listener for = is working
     $('#equals').on('click', submitCalculation);
     // listener for clear is working
@@ -32,7 +32,7 @@ function submitCalculation(event) {
     const inputNumbers = {
         numberOne,
         numberTwo,
-        operands
+        operand
     }
 
 
@@ -55,6 +55,13 @@ function submitCalculation(event) {
     // Take some data and send to server
 }
 
+function chooseOperand(){
+    console.log("In ChooseOperand")
+    console.log( $(this).text())
+    //
+    operand = $(this).text()
+
+}
 
 
 function getCalculation() {
@@ -82,10 +89,10 @@ function render(calculations) {
     $('#output').empty();
     // Looping over and appending to DOM
     for (let calculation of calculations) {
-        console.log(calculation);
+        console.log("in render", calculation);
         $('#output').append(`
             <li>
-            ${calculation.numberOne}
+            ${calculation.num1} ${calculation.operand}${calculation.num2} = ${calculation.sum}
             </li>
       `)
 
