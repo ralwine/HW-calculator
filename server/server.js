@@ -53,11 +53,23 @@ app.post('/calc', (req, res) => {
 function mathFunctions(value1, value2, oper) {
     console.log("In mathFunctions") // getting to mathfunctions still undefined
     // let's try if/else for this
-    if (oper == '+'){
+    if (oper == '+') {
         return value1 + value2;
     }
-    if()
+    if (oper == '-') {
+        return value1 - value2;
     }
+    if (oper == '*') {
+        return value1 * value2
+    }
+    if (oper == '/'){
+        return value1 / value2
+    }
+    else{
+        return undefined
+        console.log("ERROR!")
+    }
+    
 }
 
 

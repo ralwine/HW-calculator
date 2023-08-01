@@ -9,10 +9,10 @@ Lucky for you there's only one assuimg you don't break anything else:
 
 
 Okay then, Functional Requirements:
-    - Submit button or = button runs POST {}
-    - All calculations done on the server {}
-    - History displays all previous calculations {}
-    - GET on page load retrieves all history data on the server {}
+    - Submit button or = button runs POST {x}
+    - All calculations done on the server {x}
+    - History displays all previous calculations {x}
+    - GET on page load retrieves all history data on the server {x}
 
 YOU GOT THIS!
 

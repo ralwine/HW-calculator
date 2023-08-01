@@ -92,7 +92,7 @@ function render(calculations) {
         console.log("in render", calculation);
         $('#output').append(`
             <li>
-            ${calculation.num1} ${calculation.operand}${calculation.num2} = ${calculation.sum}
+            ${calculation.num1} ${calculation.operand} ${calculation.num2} = ${calculation.sum}
             </li>
       `)
 
