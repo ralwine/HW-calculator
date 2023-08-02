@@ -1,5 +1,6 @@
 $(document).ready(onReady);
 
+
 //let calculation;
 // array of operands to send over to convert into commands, perhaps?
 // const operands = ['+', '-', '*', '/'] // operands are being sent undefined
@@ -17,6 +18,8 @@ function onReady() {
     $('#equals').on('click', submitCalculation);
     // listener for clear is working
     $('#clear').on('click', clear);
+    // button to clear all history
+    $('#allClear').on('click', clearAllCalculations);
 
 }
 
@@ -108,3 +111,8 @@ function clear() {
 
 }
 
+function clearAllCalculations() {
+    // make button to clear history... er rather screen (It does look cool!)
+    console.log('in clearAllCalculations');
+    $('#output').remove()
+}

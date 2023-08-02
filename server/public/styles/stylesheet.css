@@ -25,6 +25,13 @@ body {
     font-size: large;
 }
 
+#allClear {
+    background-color: black;
+    color: white;
+    font-size: large;
+}
+
 #output{
     font-size: x-large;
 }
+
