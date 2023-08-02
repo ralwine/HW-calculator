@@ -1,3 +1,30 @@
 body {
     background-color: cyan;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+.input {
+    font-size: large;
+}
+
+.isOperand{
+    background-color: gold;
+    font-size: large;
+}
+
+#equals {
+    background-color: green;
+    color: azure;
+    font-size: large;
+}
+
+#clear {
+    background-color: darkred;
+    color: azure;
+    font-size: large;
+}
+
+#output{
+    font-size: x-large;
 }
