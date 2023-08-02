@@ -15,3 +15,6 @@ This project was intended to demonstrate my comprehension of this week's materia
 
 The next day, I built my listeners and tested them, and things seemed to be progressing alright until I started to assemble my GET/POST routes. Lots of invocation errors that I couldn't seem to find my way around even when I reached out for help. Cut to Sunday, I started to have issues with the localhost right away and was not able to resolve that without assistance; apparently my port was occupied with a previous project and had to be refreshed/redirected to this one and eventually got data to show up in the server console at the last possible moment. I tried to get some structural stuff (like the functions on the server side)in and commented/uncommented it out in some areas so this probably looks horrific to your eyes.
 
+UPDATE:
+
+Functioning server-side calculator app that takes in two numbers and can execute the mathematical operations of addition, subtraction, multiplication and division. Calculations are appended in the area of the DOM below the interface. Input fields can be cleared with the CLR button. The entire output can be cleared with the AC button, but it does not clear the history.... it does however look cool.
