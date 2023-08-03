@@ -58,9 +58,9 @@ function submitCalculation(event) {
     // Take some data and send to server
 }
 
-function chooseOperand(){
+function chooseOperand() {
     console.log("In ChooseOperand")
-    console.log( $(this).text())
+    console.log($(this).text())
     //
     operand = $(this).text()
 
@@ -114,5 +114,16 @@ function clear() {
 function clearAllCalculations() {
     // make button to clear history... er rather screen (It does look cool!)
     console.log('in clearAllCalculations');
+    $.ajax({
+        method: 'DELETE',
+        url: '/calc'
+    }).then((response) => {
+        console.log('at then in clearAllCalculations')
+        getCalculation()
+    }).catch((error) => {
+        alert("request failed")
+        console.log("Request failed", error)
+    })
+
     $('#output').remove()
 }

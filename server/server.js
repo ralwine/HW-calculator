@@ -47,7 +47,11 @@ app.post('/calc', (req, res) => {
     res.sendStatus(201)
 })
 
-
+//let's knock this DELETE out!
+app.delete('/calc', (req, res) => {
+    console.log("at server DELETE")
+    calculations = [] // set whole array to '0' / AKA DELETE!
+})
 
 // functions addNumbers, subtractNumbers, multiplyNumbers, divideNumbers... so far
 function mathFunctions(value1, value2, oper) {
@@ -62,14 +66,14 @@ function mathFunctions(value1, value2, oper) {
     if (oper == '*') {
         return value1 * value2
     }
-    if (oper == '/'){
+    if (oper == '/') {
         return value1 / value2
     }
-    else{
+    else {
         return undefined
         console.log("ERROR!")
     }
-    
+
 }
 
 

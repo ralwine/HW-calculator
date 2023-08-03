@@ -17,4 +17,4 @@ The next day, I built my listeners and tested them, and things seemed to be prog
 
 UPDATE:
 
-Functioning server-side calculator app that takes in two numbers and can execute the mathematical operations of addition, subtraction, multiplication and division. Calculations are appended in the area of the DOM below the interface. Input fields can be cleared with the CLR button. The entire output can be cleared with the AC button, but it does not clear the history.... it does however look cool.
+Functioning server-side calculator app that takes in two numbers and can execute the mathematical operations of addition, subtraction, multiplication and division. Calculations are appended in the area of the DOM below the interface. Input fields can be cleared with the CLR button. The entire output history can be cleared with the AC button, which looks kinda cool.
